@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Wedding of Mira & Fata</title>
+
+<meta property="og:title" content="The Wedding of Mira & Fata">
+
+<meta property="og:description" content="Kepada Tamu Undangan, buka undangan untuk melihat detail acara kami.">
+
+<meta property="og:image" content="https://the-wedding-of-mira-and-fata.netlify.app/assets/preview.jpg">
+
+<meta property="og:image:width" content="1200">
+
+<meta property="og:image:height" content="630">
+
+<meta property="og:url" content="https://the-wedding-of-mira-and-fata.netlify.app">
+
+<meta property="og:type" content="website">
+
+<style>
+
+body{
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  background:#ffffff;
+}
+
+.container{
+  position:relative;
+  width:100%;
+  max-width:430px;
+  height:100vh;
+  overflow:hidden;
+}
+
+.cover{
+  width:100%;
+  height:100vh;
+  object-fit:cover;
+  display:block;
+}
+
+.guest-box{
+
+  position:absolute;
+
+  bottom:150px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  background:rgba(115,136,117,0.7);
+
+  padding:12px 24px;
+
+  border-radius:16px;
+
+  text-align:center;
+
+}
+
+.kepada{
+
+  color:white;
+
+  font-size:16px;
+
+  font-family:serif;
+
+  margin-bottom:4px;
+
+}
+
+.guest{
+
+  color:white;
+
+  font-size:22px;
+
+  font-family:serif;
+
+  white-space:nowrap;
+
+}
+
+.open-btn{
+
+  position:absolute;
+
+  top:330px;
+
+  left:31%;
+
+  transform:translateX(-50%);
+
+  width:200px;
+
+  height:300px;
+
+  border-radius:50%;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="assets/cover.png" class="cover">
+
+<div class="guest-box">
+
+<div class="kepada">
+Kepada Yth.
+</div>
+
+<div class="guest" id="guestName">
+Tamu Undangan
+</div>
+
+</div>
+
+<a href="https://bivtask.my.canva.site/the-wedding-of-mira-dan-fata"
+class="open-btn">
+</a>
+
+</div>
+
+<script>
+
+const urlParams = new URLSearchParams(window.location.search);
+
+const guest = urlParams.get('to') || 'Tamu Undangan';
+
+document.getElementById("guestName").innerText = guest;
+
+</script>
+
+</body>
+
+</html>
